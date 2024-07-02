@@ -12,6 +12,6 @@ A little bash script to get to know me a little more! This was a project assigne
 4. Otherwise show contact info and
 5. End the Program
 
-![image](https://github.com/JoshMartin365/PortfolioBash/assets/170442907/04ebb653-c013-4728-abed-039c0e5def9b)
-![image](https://github.com/JoshMartin365/PortfolioBash/assets/170442907/6a645f32-a2ca-4d4a-8030-212af2e2b55e)
+![image](https://github.com/JoshMartin365/PortfolioBash/assets/170442907/e99229e1-db33-4441-afba-fe8ebd01860d)
+![image](https://github.com/JoshMartin365/PortfolioBash/assets/170442907/dd111967-bab9-493b-948c-e3923869c7b5)
 
