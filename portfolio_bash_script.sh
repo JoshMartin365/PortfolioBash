@@ -23,6 +23,7 @@ agile='Agile methodology'
 rollCheckString='roll'
 rollExit='no'
 
+#start the profile roller
 echo "My name is $name, Thank you for trying out my profile bash!"
 echo "Roll a 1d20 to get a few facts about me (input 'roll' to get started or 'no' to exit): "
 
@@ -48,6 +49,7 @@ declare -a array=("I am a graduate of $school1 and $school2"
 "I graduated Magna Cum Laude from $school2"
 "I was on the deans list every year while at school at $school2")
 
+#check to see if the user input is "roll" if so, set the randomroll and perform inital roll
 read rollCheck
 randomRoll=$((1 + $RANDOM % 20))
 
@@ -57,6 +59,7 @@ if [[ $rollCheck = $rollCheckString ]]; then
     done
 fi
 
+#enter into the do while loop. Will continue to ask for more rolls until a "no" is input
 while true; do
     echo "Roll again? Input "roll" or "no" to quit: "
     read inputWhile
@@ -64,7 +67,7 @@ while true; do
         for (( i=0; i<($randomRoll); i++ )); do
             echo "${array[(1 + $RANDOM % 20)]}"
         done
-
+#when no is input, break the loop and display contact info
     elif [[ $inputWhile = $rollExit ]]; then
         echo "Thank you for checking out my profile roller!"
         echo "$name"
