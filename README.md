@@ -11,3 +11,7 @@ A little bash script to get to know me a little more! This was a project assigne
 3. If so display 1-20 more random facts.
 4. Otherwise show contact info and
 5. End the Program
+
+![image](https://github.com/JoshMartin365/PortfolioBash/assets/170442907/04ebb653-c013-4728-abed-039c0e5def9b)
+![image](https://github.com/JoshMartin365/PortfolioBash/assets/170442907/6a645f32-a2ca-4d4a-8030-212af2e2b55e)
+
