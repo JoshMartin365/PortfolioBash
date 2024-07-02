@@ -4,6 +4,8 @@
 
 #Variables
 name='Josh Martin'
+email='joshdmartin99@gmail.com'
+linkedin='https://www.linkedin.com/in/josh-martin-516543b4/'
 school1='Oakland University'
 school2='Oakland Community College'
 degree1='Associates Degree in Software Engineering'
@@ -64,6 +66,10 @@ while true; do
         done
 
     elif [[ $inputWhile = $rollExit ]]; then
+        echo "Thank you for checking out my profile roller!"
+        echo "$name"
+        echo "$linkedin"
+        echo "Email: $email"
         break
     fi
 done
