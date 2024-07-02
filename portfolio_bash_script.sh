@@ -19,11 +19,10 @@ IdeList='Visual Studio, Intellij and Android Studio'
 Api='Rest Apis'
 agile='Agile methodology'
 rollCheckString='roll'
+rollExit='no'
 
 echo "My name is $name, Thank you for trying out my profile bash!"
-echo "Roll a 1d20 to get a few facts about me (input 'roll' to get started): "
-read rollCheck
-randomRoll = (1 + $RANDOM % 20)
+echo "Roll a 1d20 to get a few facts about me (input 'roll' to get started or 'no' to exit): "
 
 #declare array for random rolls
 declare -a array=("I am a graduate of $school1 and $school2"
@@ -47,10 +46,24 @@ declare -a array=("I am a graduate of $school1 and $school2"
 "I graduated Magna Cum Laude from $school2"
 "I was on the deans list every year while at school at $school2")
 
-if [[$rollCheck = $rollCheckString]]
-then
-for (( i=0; i<($randomroll); i++ ));
-do
-echo "${array[(1 + $RANDOM % 20)]}"
-done
+read rollCheck
+randomRoll=$((1 + $RANDOM % 20))
+
+if [[ $rollCheck = $rollCheckString ]]; then
+    for (( i=0; i<($randomRoll); i++ )); do
+        echo "${array[(1 + $RANDOM % 20)]}"
+    done
 fi
+
+while true; do
+    echo "Roll again? Input "roll" or "no" to quit: "
+    read inputWhile
+    if [[ $inputWhile = $rollCheckString ]]; then
+        for (( i=0; i<($randomRoll); i++ )); do
+            echo "${array[(1 + $RANDOM % 20)]}"
+        done
+
+    elif [[ $inputWhile = $rollExit ]]; then
+        break
+    fi
+done
